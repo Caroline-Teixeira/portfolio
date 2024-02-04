@@ -1,7 +1,7 @@
 <h1>Portfolio</h1>
 
 Nova página de portfólio<br>
-<a href=https://caroline-teixeira.github.io/portfolio/index.html>Link</a>
+<a href=https://caroline-teixeira.github.io/portfolio/ target:_blank>Link</a>
 
 <h4>Linguagens</h4>
 <p align="left">
