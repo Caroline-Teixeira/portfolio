@@ -1,4 +1,4 @@
-<h1>Portifolio</h1>
+<h1>Portfolio</h1>
 
 Nova página de portfólio<br>
 <a href=https://caroline-teixeira.github.io/portfolio/index.html>Link</a>
