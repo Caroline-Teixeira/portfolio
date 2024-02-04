@@ -1,0 +1,77 @@
+/*Projetos*/
+.project-container {
+    height: 72vh;
+    padding-top: 1rem;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: var(--background-transparent);
+  }
+  
+
+  /*Scroll e Grid*/
+ .offer__scroll-container {
+    max-height: 52vh;
+    margin: 3rem; /* 24px para rem */
+    overflow-y: auto;
+  }
+  
+  .offer__scroll-container::-webkit-scrollbar { /*barra de navegação lateral*/
+    width: 0.0625rem; /* 1px para rem */
+  }
+  
+  /* Thumb */
+  .offer__scroll-container::-webkit-scrollbar-thumb {
+    background-color: transparent;
+  }
+ 
+
+  
+  /*CARDS*/
+  .offer__list-item {
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .cards {
+    position: relative;
+    width: 20rem; /* 220px para rem */
+    height: 12.5rem; /* 200px para rem */
+    overflow: hidden;
+    border-radius: 0.5rem; /* 8px para rem */
+  }
+  
+  .cards span {
+    padding: 1rem; /* 16px para rem */
+    position: absolute;
+    color: var(--font-text);
+    font-size: 1.5rem; /* 24px para rem */
+    font-weight: 700;
+    white-space: nowrap; /*para animação*/
+    overflow: hidden;    /*para animação*/
+    animation: typing 3s steps(50, end) infinite; /*para animação*/
+  }
+
+  
+  /* COLOR CARDS */
+  .card1, .card3, .card5{
+    background-color: var(--card1);
+  }
+  .card2,  .card4, .card6 {
+    background-color: var(--card2);
+  }
+  
+
+
+/*Imagem interna do projeto*/
+  .offer__list-item img {
+    position: absolute;
+    bottom: 0;
+    height: auto;
+    width: 320px;
+    
+  }
+  
+ 

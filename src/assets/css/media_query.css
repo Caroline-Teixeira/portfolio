@@ -1,0 +1,62 @@
+/*RESPONSIVIDADE para celulares*/
+
+/*Barra do menu*/
+@media screen and (max-width:600px) {
+    nav li {
+        float: none;
+        text-align: center;
+        width: 100%;
+    }
+
+    .main__content h1 {
+        text-align: justify;
+        line-height: 150%;
+        white-space: nowrap;
+        box-sizing: border-box;
+        font-size: 4vw;
+
+    }
+
+    .main__content p {
+        text-align: justify;
+        line-height: 150%;
+        font-size: 3vw;
+
+    }
+
+    .main__content .social .button2 {
+        display: inline-flexbox;
+        float: none;
+        text-align: center;
+        width: 20%;
+        padding: 2px, 0, 0, 0;
+    }
+
+    .offer__list-item {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 1rem;
+        margin-bottom: 1rem;
+    }
+
+}
+
+/*Posição da Imagem*/
+@media screen and (max-width:768px) {
+    section {
+        width: 100%;
+        padding: 0;
+    }
+
+    .flex {
+        flex-direction: column-reverse;
+    }
+
+}
+/*FIM responsividade*/
+
+
+
+
+

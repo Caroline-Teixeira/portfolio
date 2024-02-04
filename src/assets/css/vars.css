@@ -1,0 +1,18 @@
+:root{
+    /*fontes*/
+    --font-dm-sans: "Poppins", sans-serif;
+
+    /*cores*/
+    --background-color: rgb(11, 30, 54);
+    --background-transparent: rgba(73, 111, 155, 0.3);
+    --button: rgb(236, 236, 236);
+    --button2:rgb(233, 233, 233);
+    --button3:rgb(0, 0, 0);
+    --font-color-button: rgb(255, 255, 255);
+    --font-text: rgb(181, 188, 247);
+    --font-text2: rgb(108, 56, 128); 
+    --card1: rgb(61, 36, 71);
+    --card2: rgb(27, 44, 56);
+
+
+}

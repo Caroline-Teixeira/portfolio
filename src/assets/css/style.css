@@ -1,0 +1,335 @@
+/*Fonte do texto do Google*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* ESTILO GERAL (*) para toda a página HTML*/
+*{
+    margin: 0; /*margem*/
+    padding: 0; /*espaçamento*/
+    box-sizing: border-box; /*para que fiquem na mesma borda da caixa*/
+    font-family: var(--font-dm-sans);
+    color: var(--font-color-button);
+    text-decoration: none;
+}
+
+body{ /*estilo para o corpo da página*/
+    background-color: var(--background-color);
+    height: 100vh; /*viewport, em relação a altura*/
+    background-image: url(../img/tech3.png);
+    background-repeat: repeat;
+    background-size: contain;
+  
+}
+
+
+.interface{
+    max-width: 1280px; /*largura máxima*/
+    margin: auto; /*centralizada na tela*/
+}
+
+
+.header{
+    padding: 40px 4% ;
+}
+.flex{
+    display: flex; /*lado a lado */
+}
+
+
+/*CABEÇALHO*/
+header > .interface{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent
+}
+
+header a{
+    color: var(--button2);
+    text-decoration: none; /*retira o sublilhado*/
+}
+
+header nav ul{
+    list-style-type: none; /*retira as bolinhas da lista*/
+}
+
+header nav ul li{
+    display: inline-block; /*menu na horizontal*/
+    padding: 1rem 5rem; /*cima e baixo, esquerda e direita*/
+    align-items: center;
+    justify-content: space-around;
+    transition: .5s ease-in-out;
+ 
+}
+
+header a{
+    color: var(--button);
+    text-decoration: none; /*retira o sublilhado*/
+    display: inline-block; 
+    transition: 1.5s;
+}
+
+header a:hover{ /*quando passa o mouse em cima*/
+    color: var(--font-text);
+    transform: scale(1.5);
+    background-color: transparent;
+    box-shadow: 0px 0px 9px var(--button2);
+}
+
+.button{ /*da pagina selecionada*/
+     color: var(--button1);
+     font-size: large;
+     background-color: var(--button3);
+     border-radius: 8px;
+ }
+
+/* FIM CABEÇALHO*/
+
+
+ /*CONTEÚDO PRINCIPAL */
+ section.main__content{
+    padding: 40px 4%;
+ }
+
+section.main__content .flex{
+    align-items: center;
+    justify-content: center;
+    gap: 90px; /*espaçamento*/
+}
+
+/*Texto*/
+.main__content h1{
+    color: var(--font-text);
+    font-size: 40px;
+    border-right: 40px var(--font-text);
+    white-space: nowrap; /*para animação*/
+    overflow: hidden;    /*para animação*/
+    animation: typing 4s steps(40, end) infinite; /*para animação*/
+    
+}
+.main__content .text1 h1 span{
+    color: var(--font-text2);
+    font-size: 70px;  
+}
+
+.main__content .text2 h1 span{
+    color: var(--font-text2);
+    font-size: 70px;  
+    
+}
+
+
+.main__content .text1 p{
+    color: var(--button2);
+    text-align: justify;
+   
+
+}
+
+.main__content .text1 ul li{
+    color: var(--button2);
+    text-align: justify;
+    list-style-type: none;
+    
+}
+/*FIM Texto*/
+
+/*Botões*/
+.main__content .social .button2 {
+    display: inline-flex;
+    padding: 0.5rem 4rem; /*cima e baixo, esquerda e direita*/
+    align-items: center;
+    justify-content: space-around;
+    border: 100px;
+    background-color: var(--button3);
+    border-radius: 8px;    
+ }
+
+ .main__content .social .button2 a:hover{ /*quando passa o mouse em cima*/
+     transform: scale(1.5);
+     background-color: transparent;
+     color: var(--font-text);
+     transition: 1.5s;
+ }
+ /*FIM Botões*/
+
+
+ /*pagina de FORMAÇÃO*/
+.main__content .text2 .box2{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 1px;
+    background-color: var(--background-transparent);
+    border-radius: 8px;
+
+}
+
+
+
+.main__content .text2 ul li{
+    color: var(--button2);
+    text-align: justify;
+    list-style-type: none;
+}
+
+
+/*FIM pagina de FORMAÇÃO*/
+
+/*Ícones*/
+.social img{  
+    width: 30px;
+    border-radius: 50%;
+}
+
+.main__content .social .email{  
+    display: inline-block;
+    margin-top: 2.5px;
+    padding-left: 5px;
+    
+   
+}
+
+.main__content .social .line{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+
+.main__content .text2 .box{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 8px;
+    
+}
+
+
+.languages img{
+    width: 75px;
+    border-radius: 50%;
+    float: left;
+    padding: 5px;
+    
+    
+}
+
+.languages {
+    list-style-type: none;
+    text-decoration: none;
+    display: inline-flex;
+    
+}
+
+/*FIM Ícones*/
+
+/*FIM CONTEÚDO PRINCIPAL */
+
+
+ 
+/*ANIMAÇÕES*/
+/*FLUTUAR*/
+@keyframes slideUpDown {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-50px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+
+/*COR*/
+@keyframes colors {
+    0% {
+        background-color: rgba(170, 120, 252, 0.2);
+      }
+      50% {
+        background-color: rgba(248, 156, 233, 0.2);
+      }
+      100% {
+        background-color: rgba(118, 118, 248, 0.2);
+      }
+}
+
+/*OPACICIDADE*/
+@keyframes fadeInOut {
+    0% {
+      opacity: 0.5;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0.5;
+    }
+  }
+  
+  
+
+.main__content .Image1 img {
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    background-size: cover;
+    border-radius: 30%;
+    animation: slideUpDown 3s ease-in-out infinite, colors 4s linear infinite;
+    /*tempo de animação, velocidade, infinito*/
+
+}
+
+.main__content .Image2 img {
+    position: relative;
+    background-size: cover;
+    border-radius: 20px;
+    animation: colors 4s linear infinite, fadeInOut 3s ease-in-out infinite, float 3s ease-in-out infinite;
+    /*tempo de animação, velocidade, infinito*/
+
+
+
+}
+/*DIGITAR */
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+ /*ROTAÇÃO*/
+@keyframes rotate{
+    from { transform: rotateZ(0deg);}
+    to {transform: rotateZ(360deg);}
+
+}
+
+.lan1, .lan2{
+    animation: rotate 2s linear infinite;
+    transform-origin: center center;
+    
+}
+.lan2 {
+    animation-direction: reverse;
+}
+
+/*FIM animações*/
+   
+
