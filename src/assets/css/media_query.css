@@ -50,13 +50,13 @@
 
     .project-container {
         display: flex;
-        width: 85vw;
-        align-items: center;
+        width: fit-content;
+        
     }
 
 
     .cards {
-        width: 13rem;
+        width: 14rem;
         /* 220px para rem */
         height: 9.5rem;
         /* 200px para rem */
@@ -71,7 +71,7 @@
 
     /*Imagem interna do projeto*/
     .offer__list-item img {
-        width: 210px;
+        width: 230px;
 
     }
 
