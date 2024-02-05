@@ -1,7 +1,7 @@
 /*RESPONSIVIDADE para celulares*/
 
 /*Barra do menu*/
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 740px) {
     nav li {
         float: none;
         text-align: center;
