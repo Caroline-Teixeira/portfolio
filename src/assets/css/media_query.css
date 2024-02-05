@@ -1,7 +1,7 @@
 /*RESPONSIVIDADE para celulares*/
 
 /*Barra do menu*/
-@media screen and (max-width:600px) {
+@media screen and (max-width: 700px) {
     nav li {
         float: none;
         text-align: center;
@@ -10,6 +10,14 @@
 
     .main__content h1 {
         text-align: justify;
+        line-height: 150%;
+        white-space: nowrap;
+        box-sizing: border-box;
+        font-size: 4vw;
+
+    }
+
+    .main__content .text2 .h1 {
         line-height: 150%;
         white-space: nowrap;
         box-sizing: border-box;
@@ -40,7 +48,35 @@
         margin-bottom: 1rem;
     }
 
+    .project-container {
+        display: flex;
+        width: 85vw;
+        align-items: center;
+    }
+
+
+    .cards {
+        width: 13rem;
+        /* 220px para rem */
+        height: 9.5rem;
+        /* 200px para rem */
+
+    }
+
+    .cards span {
+        font-size: 1rem;
+        /* 24px para rem */
+
+    }
+
+    /*Imagem interna do projeto*/
+    .offer__list-item img {
+        width: 210px;
+
+    }
+
 }
+
 
 /*Posição da Imagem*/
 @media screen and (max-width:768px) {
@@ -54,9 +90,5 @@
     }
 
 }
+
 /*FIM responsividade*/
-
-
-
-
-
