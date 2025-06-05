@@ -11,8 +11,22 @@
     --font-color-button: rgb(255, 255, 255);
     --font-text: rgb(181, 188, 247);
     --font-text2: rgb(108, 56, 128); 
-    --card1: rgb(61, 36, 71);
-    --card2: rgb(27, 44, 56);
+    --card1: rgba(139, 15, 52, 0.774);
+    --card2: rgba(4, 92, 66, 0.651);
+    --card3: rgba(54, 65, 224, 0.781);
 
+    /* Cores para tecnologias, linguagens e ferramentas */
+    --color-html: #e34c26;
+    --color-css: #2965f1;
+    --color-javascript: #f0db4f;
+    --color-python: #306998;
+    --color-java: #b07219;
+    --color-spring: #6db33f;
+    --color-mysql: #00758f;
+    --color-git: #f05033;
+    --color-figma: #1e1e2f;
+    --color-vscode: #007acc;
+    --color-nodejs: #68a063;
+    --color-postman: #ff6c37;
 
 }

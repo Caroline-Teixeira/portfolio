@@ -1,45 +1,41 @@
-/*RESPONSIVIDADE para celulares*/
+/* RESPONSIVIDADE PARA DISPOSITIVOS MÓVEIS */
 
-/*Barra do menu*/
+/* Media query para telas até 740px */
 @media screen and (max-width: 740px) {
+    /* Barra do menu */
     nav li {
         float: none;
         text-align: center;
         width: 100%;
     }
 
-    .main__content h1 {
+    /* Títulos principais */
+    .main__content h1,
+    .main__content .text2 h1 {
         text-align: justify;
-        line-height: 150%;
+        line-height: 1.5;
         white-space: nowrap;
         box-sizing: border-box;
-        font-size: 4vw;
-
+        font-size: 4vw; /* Mantido, mas considere usar rem para consistência */
     }
 
-    .main__content .text2 .h1 {
-        line-height: 150%;
-        white-space: nowrap;
-        box-sizing: border-box;
-        font-size: 4vw;
-
-    }
-
+    /* Parágrafos */
     .main__content p {
         text-align: justify;
-        line-height: 150%;
-        font-size: 3vw;
-
+        line-height: 1.5;
+        font-size: 3vw; /* Mantido, mas considere usar rem para consistência */
     }
 
+    /* Botões sociais */
     .main__content .social .button2 {
-        display: inline-flexbox;
-        float: none;
-        text-align: center;
+        display: flex;
+        justify-content: center;
         width: 20%;
-        padding: 2px, 0, 0, 0;
+        margin: 0 auto;
+        padding: 0.2rem; /* Ajustado de '2px, 0, 0, 0' para uma sintaxe válida */
     }
 
+    /* Lista de itens (tecnologias ou projetos) */
     .offer__list-item {
         display: grid;
         grid-template-columns: 1fr;
@@ -48,47 +44,47 @@
         margin-bottom: 1rem;
     }
 
+    /* Container de projetos */
     .project-container {
         display: flex;
-        width: fit-content;
-        
+        flex-direction: column; /* Adicionado para melhor organização em telas pequenas */
+        width: 100%; /* Ajustado de 'fit-content' para ocupar toda a largura */
+        align-items: center;
     }
 
-
+    /* Estilização dos cards de projeto */
     .cards {
         width: 14rem;
-        /* 220px para rem */
         height: 9.5rem;
-        /* 200px para rem */
-
+        box-sizing: border-box;
     }
 
+    /* Texto dentro dos cards */
     .cards span {
         font-size: 1rem;
-        /* 24px para rem */
-
     }
 
-    /*Imagem interna do projeto*/
+    /* Imagem interna dos projetos */
     .offer__list-item img {
-        width: 230px;
-
+        width: 14.375rem; /* Convertido 230px para rem (230 / 16 = 14.375) */
+        max-width: 100%; /* Adicionado para garantir responsividade */
     }
-
 }
 
-
-/*Posição da Imagem*/
-@media screen and (max-width:768px) {
+/* Media query para telas até 768px */
+@media screen and (max-width: 768px) {
+    /* Seções */
     section {
         width: 100%;
         padding: 0;
+        box-sizing: border-box;
     }
 
+    /* Layout flexível */
     .flex {
         flex-direction: column-reverse;
+        align-items: center;
     }
-
 }
 
-/*FIM responsividade*/
+/* FIM RESPONSIVIDADE */
