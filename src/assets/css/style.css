@@ -304,6 +304,7 @@ section.main__content .flex{
 
 }
 /*DIGITAR */
+/*DIGITAR */
 @keyframes typing {
     0% {
         width: 0;
@@ -314,25 +315,7 @@ section.main__content .flex{
     }
 }
 
- /*ROTAÇÃO*/
-@keyframes rotate{
-    from { transform: rotateZ(0deg);}
-    to {transform: rotateZ(360deg);}
 
-}
-
-.lan1, .lan2{
-    animation: rotate 2s linear infinite;
-    transform-origin: center center;
-    
-}
-.lan2 {
-    animation-direction: reverse;
-}
-
-/*FIM animações*/
-
-/* INÍCIO Linguagens e ferramentas */
 /* INÍCIO Linguagens e ferramentas */
 .tech-section {
     background-color: var(--background-transparent);

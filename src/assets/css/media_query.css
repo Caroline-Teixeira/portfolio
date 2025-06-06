@@ -1,90 +1,444 @@
-/* RESPONSIVIDADE PARA DISPOSITIVOS MÓVEIS */
+/* ========================================
+   RESPONSIVIDADE PARA DISPOSITIVOS MÓVEIS
+   ======================================== */
 
-/* Media query para telas até 740px */
-@media screen and (max-width: 740px) {
-    /* Barra do menu */
-    nav li {
-        float: none;
+/* Definição das animações de fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Pequeno deslocamento para cima */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Media query para tablets (768px - 1024px) */
+@media screen and (max-width: 1024px) {
+    .interface {
+        max-width: 100%;
+        padding: 0 2rem;
+    }
+    
+    header nav ul li {
+        padding: 1rem 3rem;
+    }
+    
+    section.main__content .flex {
+        gap: 60px;
+    }
+}
+
+/* Media query para tablets pequenos e celulares grandes (481px - 768px) */
+@media screen and (max-width: 768px) {
+    /* Layout geral */
+    .interface {
+        padding: 0 1rem;
+    }
+    
+    .flex {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+    
+    /* Header */
+    .header {
+        padding: 20px 4%;
+    }
+    
+    header nav ul li {
+        display: block;
+        padding: 0.8rem 0;
         text-align: center;
         width: 100%;
     }
-
-    /* Títulos principais */
-    .main__content h1,
-    .main__content .text2 h1 {
-        text-align: justify;
-        line-height: 1.5;
-        white-space: nowrap;
-        box-sizing: border-box;
-        font-size: 4vw; /* Mantido, mas considere usar rem para consistência */
+    
+    /* Conteúdo principal */
+    section.main__content {
+        padding: 20px 4%;
     }
-
-    /* Parágrafos */
+    
+    section.main__content .flex {
+        gap: 3rem;
+    }
+    
+    /* Títulos - CORRIGIDO para remover efeito "andar" */
+    .main__content h1 {
+        font-size: 2rem;
+        text-align: center;
+        line-height: 1.3;
+        /* Remove as propriedades do efeito typing */
+        white-space: normal !important;
+        overflow: visible !important;
+        animation: fadeIn 1.5s ease-out forwards !important;
+        /* Remove a borda direita que faz parte do cursor */
+        border-right: none !important;
+        /* Permite quebra de linha natural */
+        word-wrap: break-word;
+        hyphens: auto;
+    }
+    
+    .main__content .text1 h1 span,
+    .main__content .text2 h1 span {
+        font-size: 2.5rem;
+    }
+    
+    /* Texto */
     .main__content p {
+        font-size: 1rem;
+        line-height: 1.6;
         text-align: justify;
-        line-height: 1.5;
-        font-size: 3vw; /* Mantido, mas considere usar rem para consistência */
     }
-
+    
     /* Botões sociais */
     .main__content .social .button2 {
-        display: flex;
+        padding: 0.8rem 2rem;
+        width: auto;
+        min-width: 200px;
         justify-content: center;
-        width: 20%;
-        margin: 0 auto;
-        padding: 0.2rem; /* Ajustado de '2px, 0, 0, 0' para uma sintaxe válida */
+        margin: 0.5rem auto;
     }
-
-    /* Lista de itens (tecnologias ou projetos) */
-    .offer__list-item {
-        display: grid;
-        grid-template-columns: 1fr;
-        justify-items: center;
-        gap: 1rem;
-        margin-bottom: 1rem;
-    }
-
-    /* Container de projetos */
-    .project-container {
-        display: flex;
-        flex-direction: column; /* Adicionado para melhor organização em telas pequenas */
-        width: 100%; /* Ajustado de 'fit-content' para ocupar toda a largura */
+    
+    .main__content .social .line {
+        flex-direction: column;
         align-items: center;
+        gap: 1rem;
     }
-
-    /* Estilização dos cards de projeto */
+    
+    /* Tecnologias */
+    .tech-section {
+        padding: 1rem;
+        margin: 1rem 0;
+    }
+    
+    .tech-icons {
+        gap: 1rem;
+        justify-content: center;
+    }
+    
+    .tech-icon {
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+    
+    .tech-icon i {
+        font-size: 2rem;
+    }
+    
+    /* Projetos */
+    .project-container {
+        width: 100%;
+        margin-top: 1rem;
+    }
+    
+    .offer__list {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .offer__list-item {
+        width: 100%;
+        justify-content: center;
+    }
+    
     .cards {
-        width: 14rem;
-        height: 9.5rem;
-        box-sizing: border-box;
+        width: 100%;
+        max-width: 350px;
+        min-height: 180px;
     }
+    
+    .cards div {
+        padding: 1.2rem;
+    }
+    
+    .project-name {
+        font-size: 1.1rem;
+    }
+    
+    .project-description {
+        font-size: 0.9rem;
+    }
+    
+    .project-stats {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+    
+    /* Imagens */
+    .main__content .Image1 img,
+    .main__content .Image2 img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    /* Boxes de formação */
+    .main__content .text2 .box,
+    .main__content .text2 .box2 {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+        margin: 0.8rem 0;
+    }
+}
 
-    /* Texto dentro dos cards */
-    .cards span {
+/* Media query para celulares (320px - 480px) */
+@media screen and (max-width: 480px) {
+    /* Layout geral */
+    .interface {
+        padding: 0 0.5rem;
+    }
+    
+    /* Header */
+    .header {
+        padding: 15px 2%;
+    }
+    
+    header nav ul li {
+        padding: 0.6rem 0;
+        font-size: 0.9rem;
+    }
+    
+    /* Conteúdo principal */
+    section.main__content {
+        padding: 15px 2%;
+    }
+    
+    section.main__content .flex {
+        gap: 2rem;
+    }
+    
+    /* Títulos - CORRIGIDO para remover efeito "andar" */
+    .main__content h1 {
+        font-size: 1.5rem;
+        text-align: center;
+        line-height: 1.3;
+        /* Remove as propriedades do efeito typing */
+        white-space: normal !important;
+        overflow: visible !important;
+        animation: fadeIn 1.5s ease-out forwards !important;
+        /* Remove a borda direita que faz parte do cursor */
+        border-right: none !important;
+        /* Permite quebra de linha natural */
+        word-wrap: break-word;
+        hyphens: auto;
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+    }
+    
+    .main__content .text1 h1 span,
+    .main__content .text2 h1 span {
+        font-size: 2rem;
+        display: inline;
+        margin-top: 0;
+    }
+    
+    /* Texto */
+    .main__content p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+    
+    /* Botões sociais */
+    .main__content .social .button2 {
+        padding: 0.6rem 1.5rem;
+        font-size: 0.9rem;
+        min-width: 180px;
+    }
+    
+    .social img {
+        width: 25px;
+    }
+    
+    /* Tecnologias */
+    .tech-section {
+        padding: 0.8rem;
+    }
+    
+    .tech-icons {
+        gap: 0.8rem;
+    }
+    
+    .tech-icon {
+        width: 3rem;
+        height: 3rem;
+    }
+    
+    .tech-icon i {
+        font-size: 1.8rem;
+    }
+    
+    /* Projetos */
+    .cards {
+        max-width: 100%;
+        min-height: 160px;
+    }
+    
+    .cards div {
+        padding: 1rem;
+    }
+    
+    .card-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.8rem;
+    }
+    
+    .project-name {
         font-size: 1rem;
     }
-
-    /* Imagem interna dos projetos */
-    .offer__list-item img {
-        width: 14.375rem; /* Convertido 230px para rem (230 / 16 = 14.375) */
-        max-width: 100%; /* Adicionado para garantir responsividade */
+    
+    .project-description {
+        font-size: 0.85rem;
+    }
+    
+    .language-tag {
+        font-size: 0.75rem;
+        padding: 0.2rem 0.5rem;
+    }
+    
+    .project-stats {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.3rem;
+        font-size: 0.75rem;
+    }
+    
+    /* Linguagens (ícones circulares) */
+    .languages img {
+        width: 60px;
+    }
+    
+    .languages {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+    
+    /* Boxes de formação */
+    .main__content .text2 .box,
+    .main__content .text2 .box2 {
+        padding: 0.8rem;
+        margin: 0.5rem 0;
+    }
+    
+    /* Estados especiais */
+    .loading-container,
+    .error-container,
+    .no-projects {
+        padding: 2rem 1rem;
+    }
+    
+    .loading-spinner {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .retry-button {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.8rem;
     }
 }
 
-/* Media query para telas até 768px */
+/* Media query para celulares muito pequenos (até 320px) */
+@media screen and (max-width: 320px) {
+    /* Títulos ainda menores - CORRIGIDO */
+    .main__content h1 {
+        font-size: 1.3rem;
+        /* Mantém as correções do efeito typing */
+        white-space: normal !important;
+        overflow: visible !important;
+        animation: fadeIn 1.5s ease-out forwards !important;
+        border-right: none !important;
+        word-wrap: break-word;
+        hyphens: auto;
+    }
+    
+    .main__content .text1 h1 span,
+    .main__content .text2 h1 span {
+        font-size: 1.8rem;
+    }
+    
+    /* Botões sociais mais compactos */
+    .main__content .social .button2 {
+        padding: 0.5rem 1rem;
+        min-width: 150px;
+        font-size: 0.8rem;
+    }
+    
+    /* Tecnologias mais compactas */
+    .tech-icon {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+    
+    .tech-icon i {
+        font-size: 1.5rem;
+    }
+    
+    /* Projetos mais compactos */
+    .cards {
+        min-height: 140px;
+    }
+    
+    .cards div {
+        padding: 0.8rem;
+    }
+    
+    .project-name {
+        font-size: 0.95rem;
+    }
+    
+    .project-description {
+        font-size: 0.8rem;
+    }
+}
+
+/* ========================================
+   UTILITÁRIOS PARA MOBILE
+   ======================================== */
+
+/* Ocultar elementos desnecessários em mobile */
 @media screen and (max-width: 768px) {
-    /* Seções */
-    section {
-        width: 100%;
-        padding: 0;
-        box-sizing: border-box;
+    /* Remove animações pesadas em dispositivos móveis */
+    .main__content .Image1 img {
+        animation-duration: 6s; /* Reduz velocidade da animação */
     }
-
-    /* Layout flexível */
-    .flex {
-        flex-direction: column-reverse;
-        align-items: center;
+    
+    .main__content .Image2 img {
+        animation-duration: 6s; /* Reduz velocidade da animação */
+    }
+    
+    /* Otimiza performance removendo animações complexas */
+    .lan1, .lan2 {
+        animation-duration: 4s; /* Reduz velocidade da rotação */
     }
 }
 
-/* FIM RESPONSIVIDADE */
+/* Melhorias de acessibilidade para touch */
+@media (hover: none) and (pointer: coarse) {
+    /* Aumenta área de toque para links e botões */
+    header nav ul li a {
+        padding: 1rem;
+        display: block;
+    }
+    
+    .main__content .social .button2 {
+        min-height: 44px; /* Tamanho mínimo recomendado para touch */
+    }
+    
+    .tech-icon {
+        min-width: 44px;
+        min-height: 44px;
+    }
+    
+    .cards {
+        min-height: 44px;
+    }
+}
+
+/* FIM RESPONSIVIDADE PARA DISPOSITIVOS MÓVEIS */
