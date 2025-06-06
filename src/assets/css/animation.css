@@ -1,0 +1,84 @@
+/*ANIMAÇÕES*/
+/*FLUTUAR*/
+@keyframes slideUpDown {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-50px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+
+/*COR*/
+@keyframes colors {
+    0% {
+        background-color: rgba(170, 120, 252, 0.2);
+      }
+      50% {
+        background-color: rgba(248, 156, 233, 0.2);
+      }
+      100% {
+        background-color: rgba(118, 118, 248, 0.2);
+      }
+}
+
+/*OPACICIDADE*/
+@keyframes fadeInOut {
+    0% {
+      opacity: 0.5;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0.5;
+    }
+  }
+  
+  
+
+.main__content .Image1 img {
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    background-size: cover;
+    border-radius: 30%;
+    animation: slideUpDown 3s ease-in-out infinite, colors 4s linear infinite;
+    /*tempo de animação, velocidade, infinito*/
+
+}
+
+.main__content .Image2 img {
+    position: relative;
+    background-size: cover;
+    border-radius: 20px;
+    animation: colors 4s linear infinite, fadeInOut 3s ease-in-out infinite, float 3s ease-in-out infinite;
+    /*tempo de animação, velocidade, infinito*/
+
+}
+
+/*DIGITAR */
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
+}

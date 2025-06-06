@@ -6,13 +6,17 @@ const GITHUB_API_URL = 'https://api.github.com/users/Caroline-Teixeira/repos';
 
 // Lista de tecnologias com ícones Font Awesome
 const TECHNOLOGIES = [
+    { name: 'Java', class: 'tech-java', icon: 'fab fa-java', color: '#b07219' },
     { name: 'HTML', class: 'tech-html', icon: 'fab fa-html5', color: '#e34c26' },
     { name: 'CSS', class: 'tech-css', icon: 'fab fa-css3-alt', color: '#2965f1' },
     { name: 'JavaScript', class: 'tech-javascript', icon: 'fab fa-js-square', color: '#f0db4f' },
-    { name: 'Java', class: 'tech-java', icon: 'fab fa-java', color: '#b07219' },
     { name: 'Python', class: 'tech-python', icon: 'fab fa-python', color: '#306998' },
     { name: 'Git', class: 'tech-git', icon: 'fab fa-git-alt', color: '#f05033' },
-    { name: 'VSCode', class: 'tech-vscode', icon: 'fas fa-code', color: '#007acc' }
+    { name: 'MySQL', class: 'tech-database', icon: 'fas fa-database', color: '#00758f' },
+    { name: 'Spring', class: 'tech-spring', icon: 'fas fa-leaf', color: '#6db33f' },
+    { name: 'ApacheMaven', class: 'tech-maven', icon: 'fas fa-feather', color: '#ff3769' }
+
+    
 ];
 
 // ========================================
@@ -85,7 +89,7 @@ function renderTechnologies(techContainer, languages = []) {
     let techsToShow = TECHNOLOGIES;
     if (languages.length > 0) {
         techsToShow = TECHNOLOGIES.filter(tech => 
-            languages.includes(tech.name) || ['Git', 'VSCode'].includes(tech.name)
+            languages.includes(tech.name) || ['Git', 'MySQL', 'Spring', 'ApacheMaven'].includes(tech.name)
         );
     }
 

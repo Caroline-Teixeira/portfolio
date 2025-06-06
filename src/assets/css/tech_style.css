@@ -1,0 +1,111 @@
+/* INÍCIO Linguagens e ferramentas */
+.tech-section {
+    background-color: var(--background-transparent);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    color: var(--font-text);
+    font-family: var(--font-dm-sans);
+    margin: 1rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tech-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.tech-icon {
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.tech-icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.tech-icon i {
+    font-size: 2.5rem;
+}
+
+/* Cores específicas para cada tecnologia */
+.tech-html i {
+    color: var(--color-html);
+}
+
+.tech-css i {
+    color: var(--color-css);
+}
+
+.tech-javascript i {
+    color: var(--color-javascript);
+}
+
+.tech-java i {
+    color: var(--color-java);
+}
+
+.tech-python i {
+    color: var(--color-python);
+}
+
+.tech-git i {
+    color: var(--color-git);
+}
+
+.tech-database i {
+    color: var(--color-mysql);
+}
+
+.tech-spring i {
+    color: var(--color-spring);
+}
+
+.tech-maven i {
+    color: var(--color-maven);
+}
+
+.tech-vscode i {
+    color: var(--color-vscode);
+}
+
+/* Efeito de hover nas cores */
+.tech-icon:hover i {
+    filter: brightness(1.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .tech-icons {
+        gap: 1rem;
+    }
+    
+    .tech-icon {
+        width: 3rem;
+        height: 3rem;
+    }
+    
+    .tech-icon i {
+        font-size: 2rem;
+    }
+}
+
+/* FIM Linguagens e ferramentas */
+
+
+
+
+   
+
